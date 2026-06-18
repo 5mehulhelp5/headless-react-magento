@@ -8,8 +8,8 @@ This project demonstrates my expertise in **Adobe Commerce (Magento 2)**, **Grap
 
 ## 🌐 Live Demo
 
-🔗 **Demo URL:** https://your-vercel-app-url.vercel.app
-
+🔗 **Demo URL:** [https://your-vercel-app-url.vercel.app
+](https://headless-react-magento-1txsss6a8-jaimin-full-stack-s-projects.vercel.app/)
 ## ✨ Features
 
 * ⚡ Headless Commerce Architecture
