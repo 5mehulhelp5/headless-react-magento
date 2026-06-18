@@ -57,7 +57,6 @@ export default function ShippingStep({ cartId, onDone }) {
     const handleAddressSubmit = async (e) => {
         e.preventDefault()
         if (!validate()) return
-        console.log(addr);
         const res = await setShippingAddress({ cartId, address: addr })
         if (res.error) return toast.error('Failed to save address')
 
@@ -140,13 +139,13 @@ export default function ShippingStep({ cartId, onDone }) {
 
                     <div className="grid grid-cols-2 gap-3">
                         <Field label="Country">
-                            <select className={input} value={addr.country_code}
+                            <select className={input} value="AE"
                                 onChange={(e) => set('country_code', e.target.value)}>
-                                <option value="AE">United Arab Emirates</option>
-                                <option value="SA">Saudi Arabia</option>
+                                <option value="AE" >United Arab Emirates</option>
+                                {/* <option value="SA">Saudi Arabia</option>
                                 <option value="IN">India</option>
                                 <option value="GB">United Kingdom</option>
-                                <option value="US">United States</option>
+                                <option value="US">United States</option> */}
                             </select>
                         </Field>
                         <Field label="Phone" error={errors.telephone}>

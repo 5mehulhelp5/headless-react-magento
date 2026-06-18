@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useParams, Link } from 'react-router'
 import { useDispatch } from 'react-redux'
 import { clearCartId } from '../../features/cartSlice'
+import { baseApi } from '../../services/baseApi'
 
 export default function OrderSuccessPage() {
     const { orderNumber } = useParams()
@@ -10,6 +11,7 @@ export default function OrderSuccessPage() {
     // Clear cart here — only runs when success page actually mounts
     useEffect(() => {
         dispatch(clearCartId())
+        dispatch(baseApi.util.resetApiState())
     }, [dispatch])
 
     return (

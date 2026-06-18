@@ -20,7 +20,7 @@ export function useCart() {
     })
     const cart = data?.cart
     const items = cart?.items || []
-    const itemCount = cart?.total_quantity || 0
+    const itemCount = cartId ? (cart?.total_quantity || 0) : 0
     const subtotal = cart?.prices?.subtotal_excluding_tax
     const grandTotal = cart?.prices?.grand_total
 

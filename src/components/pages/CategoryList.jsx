@@ -5,7 +5,7 @@ import ProductCardSkeleton from '../common/ProductCardSkeleton';
 
 export default function CategoryList() {
     const { id } = useParams();
-    const categoryId = id || '6';
+    const categoryId = id || import.meta.env.VITE_WATCHES_CATEGORY_ID;
     const { data, isLoading, isError } = useGetCategoryProductsQuery({ categoryId, pageSize: 12, currentPage: 1 })
     const products = data?.products?.items || []
     return (

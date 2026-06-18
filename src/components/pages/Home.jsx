@@ -4,6 +4,9 @@ import ProductCard from '../common/ProductCard';
 import ProductCardSkeleton from '../common/ProductCardSkeleton';
 
 export default function Home() {
+    const apparelCatId = import.meta.env.VITE_APPAREL_CATEGORY_ID;
+    const accessoriesCatId = import.meta.env.VITE_ACCESSORIES_CATEGORY_ID;
+    const watchedCatId = import.meta.env.VITE_WATCHES_CATEGORY_ID;
     const { data, isLoading, isError } = useGetCategoryProductsQuery({ categoryId: 4, pageSize: 4, currentPage: 1 })
     const products = data?.products?.items || []
     return (
@@ -66,7 +69,7 @@ export default function Home() {
                             <h3 className="text-xl font-bold text-white">Apparel</h3>
                             <p className="mt-1 text-sm text-gray-300">Premium everyday wear</p>
                         </div>
-                        <Link to="/shop/id/6" className="absolute inset-0"></Link>
+                        <Link to={`/shop/id/${apparelCatId}`} className="absolute inset-0"></Link>
                     </div>
                     {/* Category 2 */}
                     <div className="group relative h-96 w-full overflow-hidden rounded-lg bg-white shadow">
@@ -82,7 +85,7 @@ export default function Home() {
                                 Bags and wallets
                             </p>
                         </div>
-                        <Link to="/shop/id/4" className="absolute inset-0"></Link>
+                        <Link to={`/shop/id/${accessoriesCatId}`} className="absolute inset-0"></Link>
                     </div>
                     {/* Category 3 */}
                     <div className="group relative h-96 w-full overflow-hidden rounded-lg bg-white shadow">
@@ -97,7 +100,7 @@ export default function Home() {
                             <h3 className="text-xl font-bold text-white">Watches</h3>
                             <p className="mt-1 text-sm text-gray-300">Premium watches collection</p>
                         </div>
-                        <Link to="/shop/id/6" className="absolute inset-0"></Link>
+                        <Link to={`/shop/id/${watchedCatId}`} className="absolute inset-0"></Link>
                     </div>
                 </div>
             </main>
