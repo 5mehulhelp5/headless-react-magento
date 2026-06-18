@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/graphql': {
-        target: 'https://magento.local',  // your docker URL
+        target: 'https://demo2.tyrescart.ae',  // your docker URL
         changeOrigin: true,
         secure: false,
       }
