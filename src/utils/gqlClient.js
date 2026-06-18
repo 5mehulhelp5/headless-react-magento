@@ -4,6 +4,6 @@ import { GraphQLClient } from 'graphql-request'
 //     import.meta.env.VITE_GRAPHQL_URL
 // )
 
-const gqlClient = new GraphQLClient('/api/graphql');
+const gqlClient = new GraphQLClient('/services/graphql');
 
 export default gqlClient
